@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 100" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Placeholder image">
+  <defs>
+    <linearGradient id="tg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#13314f"/>
+      <stop offset="1" stop-color="#0A1929"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="100" fill="url(#tg)"/>
+  <!-- faint "list / contents" motif -->
+  <g stroke="#78bfbf" stroke-opacity="0.4" stroke-width="3" stroke-linecap="square">
+    <line x1="34" y1="30" x2="150" y2="30"/>
+    <line x1="34" y1="50" x2="186" y2="50"/>
+    <line x1="34" y1="70" x2="120" y2="70"/>
+  </g>
+  <g fill="#78bfbf" fill-opacity="0.5">
+    <rect x="22" y="27" width="6" height="6"/>
+    <rect x="22" y="47" width="6" height="6"/>
+    <rect x="22" y="67" width="6" height="6"/>
+  </g>
+  <!-- dashed placeholder frame -->
+  <rect x="8" y="8" width="304" height="84" fill="none" stroke="#ffffff" stroke-opacity="0.28" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <!-- image placeholder glyph -->
+  <g transform="translate(258,50)" fill="#ffffff" fill-opacity="0.85">
+    <rect x="-26" y="-18" width="52" height="36" fill="none" stroke="#ffffff" stroke-opacity="0.85" stroke-width="2.5"/>
+    <circle cx="-12" cy="-6" r="4"/>
+    <path d="M-24 14 L-8 -2 L2 8 L11 -4 L24 14 Z"/>
+  </g>
+</svg>
