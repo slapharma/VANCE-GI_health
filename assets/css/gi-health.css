@@ -24,7 +24,7 @@
     --font-heading: 'Outfit', sans-serif;
 
     /* Spacing */
-    --container-width: 1200px;
+    --container-width: 1320px;
     --header-height: 80px;
 
     /* Shadows & radius */
@@ -337,7 +337,16 @@ p { margin-bottom: 1em; }
 .anat-region { fill: var(--primary-light); opacity: 0.85; animation: pulse 2.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
 
 /* ---------- Two-column condition body ---------- */
-.cond-layout { display: grid; grid-template-columns: 260px 1fr; gap: 48px; align-items: start; }
+.cond-layout {
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr) 250px;
+    grid-template-areas: "left main toc";
+    gap: 40px;
+    align-items: start;
+}
+.cond-rail-left { grid-area: left; }
+.cond-main { grid-area: main; }
+.cond-rail-right { grid-area: toc; }
 
 /* Sidebar — two distinctly designed section cards */
 .cond-sidebar { position: sticky; top: calc(var(--header-height) + 24px); display: flex; flex-direction: column; gap: 24px; }
@@ -526,15 +535,24 @@ p { margin-bottom: 1em; }
 @keyframes pulse { 0%,100% { opacity: 0.55; transform: scale(0.97); } 50% { opacity: 0.95; transform: scale(1.04); } }
 
 /* ---------- Responsive ---------- */
+/* Laptop/tablet: drop the right "On this page" rail, keep left rail + content */
+@media (max-width: 1080px) {
+    .cond-layout { grid-template-columns: 230px minmax(0, 1fr); grid-template-areas: "left main"; gap: 32px; }
+    .cond-rail-right { display: none; }
+}
 @media (max-width: 980px) {
     .gi-hero .container, .cond-hero .container { grid-template-columns: 1fr; }
     .hero-visual, .cond-visual { order: -1; }
     .grid-3 { grid-template-columns: repeat(2, 1fr); }
     .stat-grid { grid-template-columns: repeat(2, 1fr); }
-    .cond-layout { grid-template-columns: 1fr; }
-    .cond-sidebar { position: static; }
-    .toc { display: none; }
+    .keyfacts, .mini-grid { grid-template-columns: repeat(2, 1fr); }
     .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+/* Mobile: single column, rails stack above content (matches header drawer breakpoint) */
+@media (max-width: 767.98px) {
+    .cond-layout { grid-template-columns: 1fr; grid-template-areas: "left" "main"; gap: 28px; }
+    .cond-sidebar { position: static; }
+    .cond-main { max-width: none; }
 }
 @media (max-width: 640px) {
     .grid-3, .mini-grid, .keyfacts, .stat-grid, .footer-grid { grid-template-columns: 1fr; }
