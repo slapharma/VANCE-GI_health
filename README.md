@@ -76,3 +76,16 @@ The prototype is built to drop into the classic PHP theme in the sibling repo `V
 Pages are clinician-style summaries written for this prototype and cite public UK sources
 (NHS, NICE, Guts UK, Crohn's & Colitis UK, Bowel Cancer UK, Cancer Research UK). They are for
 information only and should be reviewed/approved before publication.
+
+## Widget (embeddable) variant
+
+`widget/` is a chrome-free copy of the section for embedding (e.g. in an iframe inside the
+WordPress hub), generated from the root pages:
+
+- `widget/index.html` — conditions grid with the site header, promo hero and footer removed.
+- `widget/conditions/*.html` — condition pages with header/footer removed and the hero flattened
+  to a clean title strip (breadcrumb + heading) via the scoped `body.widget` CSS in `gi-health.css`.
+
+Live: https://vance-gi-health.vercel.app/widget/index.html. Internal links stay inside `widget/`.
+Regenerate after editing the root pages by re-running the widget build (strip header/hero/footer,
+shift `assets/` paths one level deeper, add `class="widget"` to `<body>`).

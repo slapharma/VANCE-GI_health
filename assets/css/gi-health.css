@@ -550,3 +550,16 @@ p { margin-bottom: 1em; }
     .ig-bar { transition: none !important; }
     * { animation-duration: 0.001s !important; }
 }
+
+/* ---------- Widget (embeddable, chrome-free) variant ---------- */
+body.widget { background: #fff; }
+body.widget .section-padding { padding: 40px 0; }
+/* Flatten the condition hero into a clean title strip (no teal banner / orbs / illustration) */
+body.widget .cond-hero { background: #fff; color: var(--text-main); border-bottom: 1px solid #eee; }
+body.widget .cond-hero .container { grid-template-columns: 1fr; padding-top: 28px; padding-bottom: 28px; }
+body.widget .cond-hero .hero-orb, body.widget .cond-visual { display: none; }
+body.widget .cond-hero h1 { color: var(--secondary-color); }
+body.widget .cond-hero .lede { color: var(--text-light); }
+body.widget .cond-hero .breadcrumb { color: var(--text-light); }
+body.widget .cond-hero .breadcrumb a { color: var(--primary-color); }
+body.widget .cond-hero .breadcrumb a:hover { text-decoration: underline; }
