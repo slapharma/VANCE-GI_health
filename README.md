@@ -5,8 +5,8 @@ structure of Tillotts Pharma's GI-Health section but **rebranded to the Vance He
 **all copy written fresh** as original patient-education content. No Tillotts text, product names or
 adverse-event forms are reused.
 
-It adds the two conditions the UK Tillotts site omits: **Irritable Bowel Syndrome (IBS)** and
-**Colorectal Cancer (CRC)** — giving a full 7-condition set.
+It adds two conditions the UK Tillotts site omits: **Irritable Bowel Syndrome (IBS)** and
+**Colorectal Cancer (CRC)**, for a current set of **6 conditions**.
 
 ## Contents
 
@@ -17,7 +17,6 @@ conditions/
   ulcerative-colitis.html
   crohns-disease.html
   microscopic-colitis.html
-  clostridioides-difficile.html
   irritable-bowel-syndrome.html             (added)
   colorectal-cancer.html                    (added)
 assets/
@@ -63,7 +62,7 @@ The prototype is built to drop into the classic PHP theme in the sibling repo `V
    sheet) and **bump the enqueue version** in `functions.php` after deploy so caches refresh.
 5. **JS** — enqueue `gi-health.js` with `wp_enqueue_script`.
 6. **Assets** — `assets/img/` references map to `get_template_directory_uri() . '/assets/img/...'`.
-7. **Menu** — add a **GI Health** item to the Primary Menu with the 7 conditions as sub-items
+7. **Menu** — add a **GI Health** item to the Primary Menu with the 6 conditions as sub-items
    (Appearance → Menus).
 8. **Deploy** via the existing Hostinger SSH tar/extract process documented in `VANCE-HealthHub-WP/CLAUDE.md`,
    then purge Hostinger + LiteSpeed caches.
