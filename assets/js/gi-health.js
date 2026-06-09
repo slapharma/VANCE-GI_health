@@ -79,14 +79,39 @@
     sections.forEach(function (s) { io.observe(s); });
   }
 
-  /* ---- 4. Mobile nav toggle ---- */
+  /* ---- 4. Mobile nav toggle (mirrors vancehealthhub.co.uk header.php) ---- */
   function initNav() {
-    var btn = document.querySelector('.nav-toggle');
-    var nav = document.querySelector('.primary-nav');
+    var btn = document.querySelector('.mobile-menu-toggle');
+    var nav = document.querySelector('.main-nav');
+    var actions = document.querySelector('.header-actions');
     if (!btn || !nav) return;
-    btn.addEventListener('click', function () {
-      nav.classList.toggle('open');
-      btn.setAttribute('aria-expanded', nav.classList.contains('open'));
+
+    function setOpen(open) {
+      nav.classList.toggle('active', open);
+      if (actions) actions.classList.toggle('active', open);
+      btn.classList.toggle('is-open', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    btn.setAttribute('aria-expanded', 'false');
+    btn.addEventListener('click', function () { setOpen(!nav.classList.contains('active')); });
+
+    // Close drawer when any nav link is tapped.
+    nav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        if (nav.classList.contains('active')) setOpen(false);
+      });
+    });
+
+    // Reset when crossing back to desktop width.
+    var mq = window.matchMedia('(min-width: 768px)');
+    function onResize(e) { if (e.matches && nav.classList.contains('active')) setOpen(false); }
+    if (mq.addEventListener) mq.addEventListener('change', onResize);
+    else if (mq.addListener) mq.addListener(onResize);
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && nav.classList.contains('active')) setOpen(false);
     });
   }
 
