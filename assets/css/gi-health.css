@@ -361,32 +361,26 @@ p { margin-bottom: 1em; }
     transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 .sidebar-block:hover { box-shadow: var(--shadow-md); }
-.sidebar-block:nth-of-type(2) { border-top-color: var(--secondary-color); animation-delay: 0.12s; }
+.cond-rail-right .sidebar-block { border-top-color: var(--secondary-color); }
 
-/* Placeholder image banner — distinct per section */
-.sidebar-block::before {
-    content: "";
-    display: block;
-    height: 84px;
-    background: var(--primary-wash) url("../img/placeholders/conditions-banner.svg") center / cover no-repeat;
-    border-bottom: 1px solid #eef1f3;
-    transition: filter 0.3s ease;
-}
-.sidebar-block:hover::before { filter: saturate(1.15) brightness(1.03); }
-.sidebar-block:nth-of-type(2)::before {
-    background: #eaf0f5 url("../img/placeholders/toc-banner.svg") center / cover no-repeat;
-}
-
-/* Section header bar with square accent marker */
+/* Illustrated section-title band (replaces the old placeholder image) */
 .sidebar-block h4 {
     display: flex; align-items: center; gap: 9px;
-    margin: 0; padding: 14px 16px 8px;
-    font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--primary-hover);
+    margin: 0; padding: 20px 16px;
+    font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+    color: #fff;
+    background: url("../img/illustrations/conditions-motif.svg") right -6px center / 104px auto no-repeat,
+                linear-gradient(135deg, #008080 0%, #006057 100%);
+    background-position: right -6px center, center;
+    transition: background-size 0.4s ease;
 }
-.sidebar-block:nth-of-type(2) h4 { color: var(--secondary-color); }
-.sidebar-block h4::before { content: ""; width: 13px; height: 13px; flex: none; background: var(--primary-color); }
-.sidebar-block:nth-of-type(2) h4::before { background: var(--secondary-color); }
+.cond-rail-right .sidebar-block h4 {
+    background: url("../img/illustrations/toc-motif.svg") right -6px center / 104px auto no-repeat,
+                linear-gradient(135deg, #13314f 0%, #0A1929 100%);
+    background-position: right -6px center, center;
+}
+.sidebar-block:hover h4 { background-size: 116px auto, auto; }
+.sidebar-block h4::before { content: ""; width: 12px; height: 12px; flex: none; background: #fff; }
 
 /* CONDITIONS — visual icon list */
 .cond-nav { padding: 6px 10px 14px; }
