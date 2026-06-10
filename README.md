@@ -89,3 +89,13 @@ WordPress hub), generated from the root pages:
 Live: https://vance-gi-health.vercel.app/widget/index.html. Internal links stay inside `widget/`.
 Regenerate after editing the root pages by re-running the widget build (strip header/hero/footer,
 shift `assets/` paths one level deeper, add `class="widget"` to `<body>`).
+
+## Mia revision (`mia/`)
+
+`mia/` is a second widget-style (chrome-free) variant carrying the revised content from
+`Vance_GI_Health_Revised_Content_v2.docx` (Mia's review, 10 June 2026): plainer patient-facing
+tone, reframed statistics, labelled diagrams in place of the bar-chart infographics, the CRC
+survival-by-stage chart removed in favour of a screening-steps infographic, smoking notes on the
+UC/Crohn's pages, and a new seventh condition page, Diverticular Disease &amp; Diverticulitis.
+Live: https://vance-gi-health.vercel.app/mia/index.html. It is hand-maintained (not generated
+from the root pages). All figures still need a final clinical check before publication.
