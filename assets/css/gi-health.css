@@ -618,24 +618,6 @@ body.widget .cond-hero .breadcrumb { color: var(--text-light); }
 body.widget .cond-hero .breadcrumb a { color: var(--primary-color); }
 body.widget .cond-hero .breadcrumb a:hover { text-decoration: underline; }
 
-/* Widget layout: left rail removed, content + TOC two-column */
-body.widget .cond-layout {
-    grid-template-columns: minmax(0, 1fr) 250px;
-    grid-template-areas: "main toc";
-}
-@media (max-width: 1080px) {
-    body.widget .cond-layout {
-        grid-template-columns: minmax(0, 1fr) 250px;
-        grid-template-areas: "main toc";
-    }
-    body.widget .cond-rail-right { display: block; }
-}
-@media (max-width: 767.98px) {
-    body.widget .cond-layout {
-        grid-template-columns: 1fr;
-        grid-template-areas: "main";
-    }
-}
 /* Page title strip (replaces the removed cond-hero) */
 .cond-page-title {
     padding: 36px 0 4px;
