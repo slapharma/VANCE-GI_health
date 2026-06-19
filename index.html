@@ -4,109 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GI Health | Vance Health Hub</title>
-  <meta name="description" content="Clear, clinician-reviewed guidance on common gastrointestinal conditions, from IBD and IBS to colorectal cancer. Understand symptoms, diagnosis and treatment.">
+  <meta name="description" content="Clear, clinician-reviewed guidance on common gastrointestinal conditions, from IBD and IBS to diverticular disease and colorectal cancer. Understand symptoms, diagnosis and treatment.">
   <link rel="icon" href="assets/img/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/gi-health.css">
 </head>
-<body>
-
-  <!-- ===== Header (shared, matches vancehealthhub.co.uk) ===== -->
-  <header class="site-header">
-    <div class="container header-content">
-      <div class="logo-area">
-        <a href="https://vancehealthhub.co.uk/"><img src="assets/img/logo.png" alt="Vance Medical" class="site-logo"></a>
-      </div>
-      <button class="mobile-menu-toggle" aria-label="Toggle Menu">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="main-nav" aria-label="Primary">
-        <ul class="nav-menu">
-          <li><a href="https://vancehealthhub.co.uk/">Home</a></li>
-          <li class="menu-item-has-children">
-            <a href="https://vancehealthhub.co.uk/">About Us</a>
-            <ul class="sub-menu">
-              <li><a href="https://vancehealthhub.co.uk/about-us/">Who We Are</a></li>
-              <li><a href="https://vancehealthhub.co.uk/contact-us/">Contact Us</a></li>
-            </ul>
-          </li>
-          <li class="menu-item-has-children">
-            <a href="https://vancehealthhub.co.uk/">The Hub</a>
-            <ul class="sub-menu">
-              <li><a href="https://vancehealthhub.co.uk/patients/">How to Use</a></li>
-              <li><a href="https://vancehealthhub.co.uk/turn-evidence-into-action/">Get Started</a></li>
-              <li><a href="https://vancehealthhub.co.uk/tools-resources/">Health Tools</a></li>
-            </ul>
-          </li>
-          <li class="menu-item-has-children">
-            <a href="https://vancehealthhub.co.uk/">Knowledgebase</a>
-            <ul class="sub-menu">
-              <li><a href="https://vancehealthhub.co.uk/category/content-healthcare-news/">Healthcare News</a></li>
-              <li><a href="https://vancehealthhub.co.uk/category/content-clinical-reviews/">Clinical Reviews</a></li>
-              <li><a href="https://vancehealthhub.co.uk/category/content-expert-opinions/">Expert Opinions</a></li>
-              <li><a href="https://vancehealthhub.co.uk/category/content-gastro-living/">Gastro Living</a></li>
-              <li><a href="https://vancehealthhub.co.uk/category/content-infographic/">Infographic Gallery</a></li>
-              <li><a href="https://vancehealthhub.co.uk/education/">Education Courses</a></li>
-            </ul>
-          </li>
-          <li class="current-menu-item"><a href="index.html">GI Health</a></li>
-          <li><a href="https://vancehealthhub.co.uk/ask-ai/">Ask AI</a></li>
-        </ul>
-      </nav>
-      <div class="header-actions">
-        <div class="header-social-links">
-          <a href="https://www.linkedin.com/company/vance-medical/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
-          <a href="https://x.com/" class="social-link" aria-label="X (Twitter)" target="_blank" rel="noopener"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- ===== Hero ===== -->
-  <section class="gi-hero">
-    <span class="hero-orb o1"></span>
-    <span class="hero-orb o2"></span>
-    <span class="hero-orb o3"></span>
-    <div class="container">
-      <div class="hero-copy">
-        <span class="eyebrow">Vance Health Hub</span>
-        <h1>GI Health</h1>
-        <p class="lede">Clear, clinician-reviewed guidance on the gut conditions we see most often. Understand what they are, how they're diagnosed and the options for living well with them.</p>
-        <div class="hero-actions">
-          <a href="#conditions" class="btn btn-primary">Explore conditions</a>
-          <a href="#understanding" class="btn btn-outline">Understanding your gut</a>
-        </div>
-      </div>
-      <div class="hero-visual" aria-hidden="true">
-        <!-- Stylised GI tract: draws in on load -->
-        <svg viewBox="0 0 300 360" role="img">
-          <path class="tract-fill" d="M150 18 C110 18 96 56 120 78 C150 104 90 120 96 162 C100 196 168 188 150 226 C138 252 196 256 188 300 C184 326 150 330 150 344"/>
-          <path class="tract-path" d="M150 18 C110 18 96 56 120 78 C150 104 90 120 96 162 C100 196 168 188 150 226 C138 252 196 256 188 300 C184 326 150 330 150 344"/>
-          <circle class="tract-dot" cx="120" cy="78" r="7"/>
-          <circle class="tract-dot" cx="96" cy="162" r="7"/>
-          <circle class="tract-dot" cx="150" cy="226" r="7"/>
-          <circle class="tract-dot" cx="188" cy="300" r="7"/>
-        </svg>
-      </div>
-    </div>
-    <span class="scroll-cue">Scroll ↓</span>
-  </section>
+<body class="widget">
 
   <!-- ===== Conditions grid ===== -->
   <section class="section-padding" id="conditions">
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow">GI Health</span>
-        <h2>Find out more about six prevalent GI conditions affecting people in the UK.</h2>
+        <h2>Find out more about seven common GI conditions affecting people in the UK.</h2>
       </div>
       <div class="grid-3">
 
         <a href="conditions/inflammatory-bowel-disease.html" class="content-card reveal" style="--reveal-delay:0s">
           <div class="card-icon"><img src="assets/img/icons/medkit.svg" alt=""></div>
           <h3>Inflammatory Bowel Disease</h3>
-          <p>The umbrella term for long-term conditions, chiefly Crohn's and ulcerative colitis, that inflame the digestive tract.</p>
+          <p>Start here: the umbrella term for long-term conditions, chiefly Crohn's disease and ulcerative colitis, that cause inflammation of the digestive tract.</p>
           <span class="card-link">Learn more <span class="arrow">→</span></span>
         </a>
 
@@ -138,10 +57,17 @@
           <span class="card-link">Learn more <span class="arrow">→</span></span>
         </a>
 
-        <a href="conditions/colorectal-cancer.html" class="content-card reveal" style="--reveal-delay:0s">
+        <a href="conditions/colorectal-cancer.html" class="content-card reveal" style="--reveal-delay:.16s">
           <div class="card-icon"><img src="assets/img/icons/scale.svg" alt=""></div>
           <h3>Colorectal Cancer</h3>
-          <p>Cancer of the colon or rectum, highly treatable when caught early through screening.</p>
+          <p>Cancer of the colon or rectum, highly treatable when found early through screening.</p>
+          <span class="card-link">Learn more <span class="arrow">→</span></span>
+        </a>
+
+        <a href="conditions/diverticular-disease.html" class="content-card reveal" style="--reveal-delay:0s">
+          <div class="card-icon"><img src="assets/img/icons/pill.svg" alt=""></div>
+          <h3>Diverticular Disease &amp; Diverticulitis</h3>
+          <p>Small pouches that form in the wall of the colon, which can sometimes cause pain or become inflamed.</p>
           <span class="card-link">Learn more <span class="arrow">→</span></span>
         </a>
 
@@ -157,22 +83,18 @@
         <h2>Digestive conditions are more common than you might think</h2>
         <p style="color:rgba(255,255,255,0.82)">The gut does far more than digest food, it influences immunity, mood and overall wellbeing. Millions of people live with a digestive condition, and most can be well managed with the right information and care.</p>
       </div>
-      <div class="stat-grid">
+      <div class="stat-grid cols-3">
         <div class="stat reveal">
-          <div class="num"><span data-count="7">0</span></div>
-          <div class="label">In around 1 in 7 UK adults live with IBS symptoms</div>
+          <div class="num"><span data-count="1">0</span> in <span data-count="7">0</span></div>
+          <div class="label">UK adults live with IBS symptoms</div>
         </div>
         <div class="stat reveal" style="--reveal-delay:.08s">
-          <div class="num"><span data-count="500">0</span><span class="suffix">k+</span></div>
+          <div class="num"><span data-count="500">0</span><span class="suffix">,000</span></div>
           <div class="label">People in the UK live with inflammatory bowel disease</div>
         </div>
         <div class="stat reveal" style="--reveal-delay:.16s">
-          <div class="num"><span data-count="90">0</span><span class="suffix">%</span></div>
-          <div class="label">Bowel cancer survival when diagnosed at the earliest stage</div>
-        </div>
-        <div class="stat reveal" style="--reveal-delay:.24s">
-          <div class="num"><span data-count="6">0</span></div>
-          <div class="label">Conditions covered in this GI Health section</div>
+          <div class="num"><span data-count="9">0</span> in <span data-count="10">0</span></div>
+          <div class="label">Survive bowel cancer when it is found at the earliest stage</div>
         </div>
       </div>
     </div>
@@ -186,41 +108,6 @@
       <a href="#" class="btn btn-outline">Go to My Dashboard</a>
     </div>
   </section>
-
-  <!-- ===== Footer (shared) ===== -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <img src="assets/img/logo.png" alt="Vance Health Hub" class="footer-logo">
-          <p>Clinician-reviewed education and tools to help you understand and manage digestive health.</p>
-        </div>
-        <div>
-          <h4>Topics</h4>
-          <a href="conditions/inflammatory-bowel-disease.html">IBD</a>
-          <a href="conditions/irritable-bowel-syndrome.html">IBS</a>
-          <a href="conditions/colorectal-cancer.html">Colorectal Cancer</a>
-          <a href="index.html#conditions">All conditions</a>
-        </div>
-        <div>
-          <h4>For Professionals</h4>
-          <a href="#">HCP Resources</a>
-          <a href="#">Clinical Reviews</a>
-          <a href="#">Webinars</a>
-        </div>
-        <div>
-          <h4>For Patients</h4>
-          <a href="#">Patient Education</a>
-          <a href="#">Tools &amp; Trackers</a>
-          <a href="#">My Dashboard</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2026 Vance Health Hub. For information only, not a substitute for professional medical advice.</span>
-        <span>Privacy · Cookies · Terms</span>
-      </div>
-    </div>
-  </footer>
 
   <script src="assets/js/gi-health.js"></script>
 </body>
